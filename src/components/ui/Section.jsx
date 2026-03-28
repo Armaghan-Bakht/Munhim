@@ -2,15 +2,15 @@ import { motion } from 'framer-motion';
 
 const Section = ({ id, title, children, className = '', index = 0 }) => {
   return (
-    <section id={id} className={`py-20 md:py-32 w-full ${className}`}>
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+    <section id={id} className={`min-h-[100dvh] flex items-center py-16 w-full ${className}`}>
+      <div className="max-w-6xl mx-auto px-6 lg:px-8 w-full">
         {title && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="mb-12 md:mb-20 text-center"
+            className="mb-10 text-center"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
               {title}
