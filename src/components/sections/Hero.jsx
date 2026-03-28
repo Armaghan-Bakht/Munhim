@@ -4,7 +4,7 @@ import Button from '../ui/Button';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center pt-16 overflow-hidden bg-slate-50">
+    <section className="relative min-h-[100dvh] flex items-center justify-center pt-16  bg-slate-50">
       {/* Background decorations */}
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-br from-blue-100/40 to-sky-100/40 rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-sky-100/40 to-blue-50/40 rounded-full blur-3xl transform -translate-x-1/3 translate-y-1/3 pointer-events-none" />

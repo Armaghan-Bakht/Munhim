@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
 ];
 
 const Navbar = () => {
@@ -17,24 +17,27 @@ const Navbar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-200'
-          : 'bg-transparent py-4'
+          ? "bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-200"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 font-bold text-xl tracking-tighter text-slate-900">
-            A<span className="text-blue-600">M</span>E.
+            <a href="#">
+              {" "}
+              A<span className="text-blue-600">M</span>E.
+            </a>
           </div>
-          
+
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
             {navItems.map((item) => (
@@ -71,7 +74,7 @@ const Navbar = () => {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-white border-b border-slate-200"
           >

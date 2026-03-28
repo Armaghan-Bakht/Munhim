@@ -5,7 +5,6 @@ import About from './components/sections/About';
 import Skills from './components/sections/Skills';
 import Experience from './components/sections/Experience';
 import Projects from './components/sections/Projects';
-import Metrics from './components/sections/Metrics';
 import Contact from './components/sections/Contact';
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
         <Skills />
         <Experience />
         <Projects />
-        <Metrics />
         <Contact />
       </main>
       <Footer />

@@ -1,28 +1,47 @@
 import Section from '../ui/Section';
 import { ArrowUpRight } from 'lucide-react';
+import p1 from '../../assets/Project1.jpeg';
+import p2 from '../../assets/Project2.jpeg';
+import p3 from '../../assets/Project3.jpeg';
+import p4 from '../../assets/Project4.jpeg';
+import p5 from '../../assets/Project5.jpeg';
 
 const Projects = () => {
   const projects = [
     {
-      title: 'Scaling a Utility App',
-      tag: 'Growth & Monetization',
-      desc: 'Optimized the subscription funnel, identified bottlenecks in onboarding, and heavily re-targeted dormant users.',
-      metric: 'Increased revenue to 5-figure MRR',
-      image: 'bg-gradient-to-br from-blue-500 to-sky-400',
+      title: 'Fitness Tracker App',
+      tag: 'Running',
+      desc: 'Optimized the subscription funnel, identified bottlenecks in onboarding, and re-targeted dormant users.',
+      metric: 'Increased MRR by 45%',
+      img: p1,
     },
     {
-      title: 'Google Ads Optimization',
-      tag: 'Paid Acquisition',
+      title: 'Photo Editor Suite',
+      tag: 'Sold',
       desc: 'Restructured UAC campaigns and refined creative assets through rigorous A/B testing protocols.',
-      metric: 'Decreased CPI by 40% & Increased ROAS',
-      image: 'bg-gradient-to-bl from-indigo-500 to-blue-500',
+      metric: 'Decreased CPI by 40%',
+      img: p2,
     },
     {
-      title: 'A/B Testing Infrastructure',
-      tag: 'Data Engineering',
-      desc: 'Designed and implemented an internal A/B testing system utilizing Firebase Remote Config for seamless rollouts.',
-      metric: 'Overall conversion improved by 25%',
-      image: 'bg-gradient-to-tr from-sky-400 to-emerald-400',
+      title: 'Language Learning',
+      tag: 'Running',
+      desc: 'Implemented an internal testing system utilizing Firebase Remote Config for seamless rollouts.',
+      metric: 'Conversion improved by 25%',
+      img: p3,
+    },
+    {
+      title: 'VPN Utility Core',
+      tag: 'Sold',
+      desc: 'Executed a comprehensive ASO overhaul targeting localized keywords across global app stores.',
+      metric: 'Organic installs grew 3x',
+      img: p4,
+    },
+    {
+      title: 'Finance & Budget Tracker',
+      tag: 'Running',
+      desc: 'Scaled paid acquisition across Google Search & YouTube keeping strict ROAS targets.',
+      metric: 'Achieved 200% ROAS',
+      img: p5,
     },
   ];
 
@@ -32,9 +51,14 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div key={index} className="group bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full">
             {/* Project Image Placeholder */}
-            <div className={`h-48 w-full ${project.image} relative overflow-hidden`}>
-              <div className="absolute inset-0 bg-black/10 mix-blend-overlay" />
-              <div className="absolute bottom-4 left-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold uppercase tracking-wider">
+            <div className="h-56 w-full relative overflow-hidden bg-slate-100">
+              <img 
+                src={project.img} 
+                alt={project.title} 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-4 bg-white/30 backdrop-blur-md px-3 py-1.5 rounded-full text-white text-xs font-bold uppercase tracking-wider border border-white/20 shadow-sm">
                 {project.tag}
               </div>
             </div>
@@ -49,7 +73,7 @@ const Projects = () => {
                 {project.desc}
               </p>
               
-              <div className="bg-blue-50 p-4 rounded-xl mt-auto">
+              <div className="bg-blue-50 p-4 rounded-xl mt-auto transition-colors group-hover:bg-blue-100/50">
                 <p className="text-sm text-blue-600 font-semibold uppercase tracking-wide mb-1">Impact</p>
                 <p className="text-blue-900 font-bold">{project.metric}</p>
               </div>
