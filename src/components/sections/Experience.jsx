@@ -39,6 +39,16 @@ const Experience = () => {
     return () => clearInterval(timer);
   }, [experiences.length]);
 
+  const handleDragEnd = (event, info) => {
+    if (info.offset.x < -30) {
+      // Swiped left, show next
+      setCurrentIndex((prev) => (prev + 1) % experiences.length);
+    } else if (info.offset.x > 30) {
+      // Swiped right, show previous
+      setCurrentIndex((prev) => (prev - 1 + experiences.length) % experiences.length);
+    }
+  };
+
   return (
     <Section id="experience" title="Professional Experience" className="bg-slate-50 overflow-hidden">
       <div className="max-w-4xl mx-auto w-full">
@@ -93,7 +103,11 @@ const Experience = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="w-full"
+              className="w-full cursor-grab active:cursor-grabbing"
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.4}
+              onDragEnd={handleDragEnd}
             >
               <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg shadow-slate-200/60 border border-slate-200">
                 <div className="flex flex-col mb-6 gap-3">
