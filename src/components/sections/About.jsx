@@ -17,7 +17,7 @@ const About = () => {
           {/* Decorative background cards */}
           <div className="absolute inset-0 bg-blue-600 rounded-3xl transform rotate-6 scale-105 opacity-20 transition-transform duration-500 group-hover:rotate-3" />
           <div className="absolute inset-0 bg-sky-400 rounded-3xl transform -rotate-3 scale-105 opacity-20 transition-transform duration-500 group-hover:-rotate-1" />
-          
+
           {/* Main frame */}
           <div className="relative bg-white p-4 rounded-3xl shadow-xl border border-slate-100 aspect-square flex flex-col">
             <div className="w-full h-full bg-slate-50 rounded-2xl relative flex justify-center items-end">
@@ -25,7 +25,10 @@ const About = () => {
               <img
                 src={profileImage}
                 alt="Abdul Munhim Ejaz"
-                className="w-[105%] max-w-none h-auto object-contain absolute bottom-0 z-10 transition-transform duration-500 group-hover:scale-[1.03] origin-bottom drop-shadow-xl"
+                className="w-[105%] max-w-none h-auto object-contain absolute bottom-0 z-10
+  transition-transform duration-500 group-hover:scale-[1.03] origin-bottom drop-shadow-xl
+  [mask-image:linear-gradient(to_top,transparent_0%,black_10%,black_100%)] 
+  [-webkit-mask-image:linear-gradient(to_top,transparent_0%,black_10%,black_100%)]"
               />
             </div>
           </div>

@@ -1,48 +1,48 @@
 import Section from '../ui/Section';
 import { ArrowUpRight } from 'lucide-react';
-import p1 from '../../assets/Project1.jpeg';
-import p2 from '../../assets/Project2.jpeg';
-import p3 from '../../assets/Project3.jpeg';
-import p4 from '../../assets/Project4.jpeg';
-import p5 from '../../assets/Project5.jpeg';
+import p1 from '../../assets/AntiVirus.jpeg';
+import p2 from '../../assets/DataRecovery.jpeg';
+import p3 from '../../assets/TimeWarp.jpeg';
+import p4 from '../../assets/VideoPlayer.jpeg';
+import p5 from '../../assets/Vidma.jpeg';
 
 const Projects = () => {
   const projects = [
-    {
-      title: 'Fitness Tracker App',
-      tag: 'Running',
-      desc: 'Optimized the subscription funnel, identified bottlenecks in onboarding, and re-targeted dormant users.',
-      metric: 'Increased MRR by 45%',
-      img: p1,
-    },
-    {
-      title: 'Photo Editor Suite',
-      tag: 'Sold',
-      desc: 'Restructured UAC campaigns and refined creative assets through rigorous A/B testing protocols.',
-      metric: 'Decreased CPI by 40%',
-      img: p2,
-    },
-    {
-      title: 'Language Learning',
-      tag: 'Running',
-      desc: 'Implemented an internal testing system utilizing Firebase Remote Config for seamless rollouts.',
-      metric: 'Conversion improved by 25%',
-      img: p3,
-    },
-    {
-      title: 'VPN Utility Core',
-      tag: 'Sold',
-      desc: 'Executed a comprehensive ASO overhaul targeting localized keywords across global app stores.',
-      metric: 'Organic installs grew 3x',
-      img: p4,
-    },
-    {
-      title: 'Finance & Budget Tracker',
-      tag: 'Running',
-      desc: 'Scaled paid acquisition across Google Search & YouTube keeping strict ROAS targets.',
-      metric: 'Achieved 200% ROAS',
-      img: p5,
-    },
+  {
+    title: 'Anti Virus App',
+    tag: 'Running',
+    desc: 'Developed real-time threat detection and malware scanning system with enhanced device protection and performance optimization.',
+    metric: 'Improved threat detection accuracy by 60%',
+    img: p1,
+  },
+  {
+    title: 'Data Recovery App',
+    tag: 'Sold',
+    desc: 'Built advanced file recovery algorithms to restore deleted photos, videos, and documents from internal and external storage.',
+    metric: 'Recovered 85% of lost user data successfully',
+    img: p2,
+  },
+  {
+    title: 'Time Warp App',
+    tag: 'Running',
+    desc: 'Created an interactive slow-motion video experience with real-time filters and engaging visual effects for social content.',
+    metric: 'User engagement increased by 30%',
+    img: p3,
+  },
+  {
+    title: 'Video Player App',
+    tag: 'Sold',
+    desc: 'Designed a high-performance video player supporting multiple formats with smooth playback and subtitle integration.',
+    metric: 'Playback performance improved by 50%',
+    img: p4,
+  },
+  {
+    title: 'Vidma Video Downloader',
+    tag: 'Running',
+    desc: 'Enabled fast and secure video downloading from multiple platforms with background processing and format selection.',
+    metric: 'Download speed increased by 2x',
+    img: p5,
+  },
   ];
 
   return (
