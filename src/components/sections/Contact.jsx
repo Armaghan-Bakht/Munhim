@@ -22,11 +22,11 @@ const Contact = () => {
 
   return (
     <Section id="contact" title="Get In Touch">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+      <div className="grid lg:grid-cols-2 gap-10 md:gap-12 lg:gap-20">
         {/* Contact Info */}
         <div>
-          <h3 className="text-3xl font-bold text-slate-900 mb-6">Let's build something great.</h3>
-          <p className="text-slate-600 mb-10 text-lg">
+          <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 md:mb-6">Let's build something great.</h3>
+          <p className="text-slate-600 mb-8 md:mb-10 text-base md:text-lg">
             Whether you have a question about scaling your app or just want to connect, my inbox is always open.
           </p>
 
@@ -34,18 +34,18 @@ const Contact = () => {
             {contactInfo.map((info, idx) => {
               const Icon = info.icon;
               return (
-                <div key={idx} className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <Icon size={24} />
+                <div key={idx} className="flex items-start sm:items-center space-x-4">
+                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0 mt-1 sm:mt-0">
+                    <Icon className="w-5 h-5 md:w-6 md:h-6" />
                   </div>
-                  <div>
-                    <p className="text-sm text-slate-500 font-medium">{info.label}</p>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm text-slate-500 font-medium mb-0.5">{info.label}</p>
                     {info.href ? (
-                      <a href={info.href} className="text-lg font-bold text-slate-900 hover:text-blue-600 transition-colors">
+                      <a href={info.href} className="text-base sm:text-lg font-bold text-slate-900 hover:text-blue-600 transition-colors block break-words">
                         {info.value}
                       </a>
                     ) : (
-                      <p className="text-lg font-bold text-slate-900">{info.value}</p>
+                      <p className="text-base sm:text-lg font-bold text-slate-900 break-words">{info.value}</p>
                     )}
                   </div>
                 </div>
@@ -55,7 +55,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white p-8 md:p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 relative overflow-hidden">
+        <div className="bg-white p-6 sm:p-8 md:p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 relative overflow-hidden">
           {/* subtle bg glow */}
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-500 rounded-full blur-3xl opacity-10 pointer-events-none" />
 

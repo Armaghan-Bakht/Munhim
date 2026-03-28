@@ -1,5 +1,5 @@
 import Section from '../ui/Section';
-import { Briefcase } from 'lucide-react';
+import { Briefcase, CheckCircle2 } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
@@ -33,27 +33,37 @@ const Experience = () => {
       <div className="max-w-4xl mx-auto">
         <div className="relative border-l-2 border-blue-200">
           {experiences.map((exp, index) => (
-            <div key={index} className="mb-12 ml-8 lg:ml-12 relative group">
+            <div key={index} className="mb-14 ml-8 md:ml-12 relative group">
               {/* Timeline dot */}
-              <span className="absolute -left-[41px] lg:-left-[57px] flex items-center justify-center w-10 h-10 lg:w-12 lg:h-12 bg-white rounded-full border-4 border-blue-100 group-hover:border-blue-300 transition-colors shadow-sm">
-                <Briefcase size={20} className={exp.current ? 'text-blue-600' : 'text-slate-400'} />
+              <span className={`absolute -left-[53px] md:-left-[73px] flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-4 transition-all duration-300 z-10 ${exp.current ? 'bg-blue-600 border-blue-100 shadow-[0_0_15px_rgba(59,130,246,0.4)]' : 'bg-slate-50 border-slate-200 group-hover:border-blue-300'}`}>
+                {exp.current ? (
+                  <Briefcase size={20} className="text-white" />
+                ) : (
+                  <Briefcase size={20} className="text-slate-400 group-hover:text-blue-500" />
+                )}
               </span>
 
-              <div className="bg-white p-6 lg:p-8 rounded-2xl shadow-sm border border-slate-100 group-hover:shadow-md transition-shadow">
-                <div className="flex flex-col md:flex-row md:items-start justify-between mb-4">
+              {/* Experience Card */}
+              <div className="bg-white p-6 md:p-8 lg:p-10 rounded-3xl shadow-md shadow-slate-200/60 border border-slate-200 group-hover:border-blue-200 group-hover:shadow-xl group-hover:-translate-y-1 transition-all duration-300">
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900">{exp.role}</h3>
-                    <h4 className="text-lg font-medium text-blue-600">{exp.company}</h4>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-2">{exp.role}</h3>
+                    <div className="inline-flex items-center px-3 py-1 rounded-lg bg-blue-50 text-blue-600 font-semibold">
+                      {exp.company}
+                    </div>
                   </div>
-                  <span className="inline-flex mt-2 md:mt-0 items-center bg-slate-100 text-slate-600 text-sm font-semibold px-3 py-1 rounded-full">
+                  <span className={`inline-flex self-start md:self-auto items-center px-4 py-1.5 rounded-full text-sm font-bold tracking-wide border ${exp.current ? 'bg-blue-600/10 text-blue-700 border-blue-200' : 'bg-slate-50 text-slate-600 border-slate-200'}`}>
                     {exp.period}
                   </span>
                 </div>
-                <ul className="space-y-3">
+                
+                <ul className="space-y-4">
                   {exp.points.map((point, i) => (
-                    <li key={i} className="flex items-start">
-                      <span className="text-blue-500 mr-2 mt-1">▹</span>
-                      <span className="text-slate-600">{point}</span>
+                    <li key={i} className="flex items-start group/item">
+                      <CheckCircle2 size={20} className="text-blue-500 mr-4 mt-0.5 shrink-0 opacity-80 group-hover/item:opacity-100 group-hover/item:scale-110 transition-transform duration-200" />
+                      <span className="text-slate-600 leading-relaxed text-[1.05rem]">
+                        {point}
+                      </span>
                     </li>
                   ))}
                 </ul>

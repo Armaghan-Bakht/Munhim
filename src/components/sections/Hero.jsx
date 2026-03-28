@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { ArrowRight, BarChart2 } from "lucide-react";
+import { ArrowRight, BarChart2, Download } from "lucide-react";
 import Button from "../ui/Button";
+import resumePdf from "../../assets/Resume.pdf";
 
 const Hero = () => {
   return (
@@ -37,13 +38,24 @@ const Hero = () => {
             Monetization. We turn data into revenue.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button as="a" href="#projects" className="gap-2">
-              View Work <ArrowRight size={18} />
-            </Button>
-            <Button variant="outline">
-              Download Resume
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-5 items-center">
+            <a 
+              href="#projects" 
+              className="group relative flex items-center justify-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-xl hover:shadow-blue-600/30 hover:-translate-y-1 w-full sm:w-auto overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out rounded-full" />
+              <span className="relative z-10">View Work</span>
+              <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1.5 transition-transform duration-300" />
+            </a>
+            
+            <a 
+              href={resumePdf} 
+              download="Munhim_Resume.pdf"
+              className="group flex items-center justify-center gap-3 bg-white text-slate-700 border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:border-blue-600 hover:text-blue-600 hover:shadow-lg hover:shadow-blue-100 hover:-translate-y-1 w-full sm:w-auto"
+            >
+              <span>Download Resume</span>
+              <Download size={20} className="text-slate-400 group-hover:text-blue-600 group-hover:-translate-y-1 transition-all duration-300" />
+            </a>
           </div>
         </motion.div>
 
