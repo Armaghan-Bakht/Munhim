@@ -5,7 +5,7 @@ import resumePdf from "../../assets/Resume.pdf";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center pt-16  bg-slate-50">
+    <section className="relative min-h-[100dvh] flex items-center justify-center pt-24 sm:pt-32 pb-16 bg-slate-50 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-br from-blue-100/40 to-sky-100/40 rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-sky-100/40 to-blue-50/40 rounded-full blur-3xl transform -translate-x-1/3 translate-y-1/3 pointer-events-none" />
@@ -26,16 +26,21 @@ const Hero = () => {
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-slate-900 tracking-tight leading-[1.15] mb-6">
-            Scaling Mobile Apps with Data-Driven{" "}
+            Performance Marketing & ASO 
             <br className="hidden lg:block"/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-400">
-              Marketing
+             That Scales
             </span>
           </h1>
 
+          <p className="text-base md:text-lg text-slate-500 mb-2 max-w-md leading-relaxed font-medium">
+            Paid acquisition + ASO for Scalable Growth
+            {/* Digital Marketing Expert specializing in advertising (Google Ads, Meta, TikTok) &
+            Monetization. I turn data into revenue. */}
+          </p> 
           <p className="text-base md:text-lg text-slate-500 mb-10 max-w-md leading-relaxed font-medium">
-            Digital Marketing Expert specializing in Google Ads, App Growth &
-            Monetization. We turn data into revenue.
+           Driving Installs, Visibility & Revenue for Mobile Apps
+            
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5 items-center">
@@ -50,7 +55,7 @@ const Hero = () => {
             
             <a 
               href={resumePdf} 
-              download="Munhim_Resume.pdf"
+              download={"Munhim_Resume.pdf"}
               className="group flex items-center justify-center gap-3 bg-white text-slate-700 border-2 border-slate-200 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:border-blue-600 hover:text-blue-600 hover:shadow-lg hover:shadow-blue-100 hover:-translate-y-1 w-full sm:w-auto"
             >
               <span>Download Resume</span>

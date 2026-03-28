@@ -12,11 +12,30 @@ const navItems = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+      
+      const sections = navItems.map(item => item.href.substring(1));
+      let current = "";
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // Detect if section occupies the upper-middle of the screen
+          if (rect.top <= window.innerHeight * 0.4 && rect.bottom >= window.innerHeight * 0.4) {
+             current = section;
+             break;
+          }
+        }
+      }
+      setActiveSection(current);
     };
+    
+    handleScroll(); // Initial check
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -31,7 +50,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="flex justify-between h-16 items-center">
-          <div className="flex-shrink-0 font-bold text-xl tracking-tighter text-slate-900">
+          <div className="flex-shrink-0 font-bold text-2xl tracking-tighter text-slate-900">
             <a href="#">
               {" "}
               A<span className="text-blue-600">M</span>E.
@@ -40,15 +59,24 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors"
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const isActive = activeSection === item.href.substring(1);
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className={`relative text-sm font-bold tracking-wide transition-colors duration-300 py-1 ${isActive ? 'text-blue-600' : 'text-slate-600 hover:text-blue-600'}`}
+                >
+                  {item.label}
+                  {isActive && (
+                    <motion.div 
+                      layoutId="activeNavLine"
+                      className="absolute -bottom-1.5 left-0 right-0 h-0.5 bg-blue-600 rounded-full" 
+                    />
+                  )}
+                </a>
+              );
+            })}
             <a
               href="#contact"
               className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-medium transition-colors shadow-md shadow-blue-500/20"
@@ -79,16 +107,19 @@ const Navbar = () => {
             className="md:hidden bg-white border-b border-slate-200"
           >
             <div className="px-6 py-4 space-y-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block text-base font-medium text-slate-600 hover:text-blue-600"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {navItems.map((item) => {
+                const isActive = activeSection === item.href.substring(1);
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`block text-base font-semibold px-4 py-2 transition-all duration-300 rounded-xl ${isActive ? 'text-blue-700 bg-blue-50/80 border-l-4 border-blue-600' : 'text-slate-600 hover:text-blue-600 border-l-4 border-transparent'}`}
+                  >
+                    {item.label}
+                  </a>
+                );
+              })}
               <a
                 href="#contact"
                 onClick={() => setIsOpen(false)}

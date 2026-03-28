@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const Section = ({ id, title, children, className = '', index = 0 }) => {
   return (
-    <section id={id} className={`min-h-[100dvh] flex items-center py-16 w-full ${className}`}>
+    <section id={id} className={`py-12 md:py-16 w-full flex-col justify-center ${className}`}>
       <div className="max-w-6xl mx-auto px-6 lg:px-8 w-full">
         {title && (
           <motion.div
