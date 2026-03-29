@@ -41,17 +41,19 @@ const About = () => {
           </h3>
           <div className="space-y-3 sm:space-y-4 text-base lg:text-lg text-slate-600 leading-relaxed mb-6 sm:mb-8">
             <p className="font-medium text-slate-700">
-              I am a results-driven Digital Marketer and App Growth Specialist
-              based in Islamabad, Pakistan. With over 4 years of hands-on
-              experience in the fast-paced app industry, my primary focus is
-              turning raw data into actionable, revenue-generating strategies.
+             Digital Marketing & App Growth Specialist with 4+ years in mobile apps and gaming. Expert in ASO, user acquisition, and monetization (IAA & IAP), driving growth through data-backed strategies.
             </p>
             <p>
-              My expertise lies deeply in Google Ads (UAC, Search, Display,
-              YouTube) and taking a rigorous, data-first approach to maximize
-              ROI and ROAS for mobile applications. Whether it's acquiring
-              highly engaged users or optimizing in-app funnels for better
-              conversion, I engineer growth loops that scale profitably.
+             Performance campaigns across Google Ads, Meta, TikTok, Mintegral & Unity to drive quality installs at optimal cost.
+
+Analytics & Tracking
+End-to-end tracking with Firebase, Google Analytics & AppsFlyer for data-driven decisions.
+
+ASO
+Optimizing keywords & metadata to improve app visibility and organic growth.
+
+Monetization (IAA & IAP)
+Maximizing revenue through optimized ads and in-app purchase strategies.
             </p>
           </div>
 

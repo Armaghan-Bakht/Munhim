@@ -12,10 +12,12 @@ const Experience = () => {
       company: 'Funsol Technologies',
       period: 'April 2024 – Present',
       points: [
-        'Managed and scaled advertising for a portfolio of 50+ applications.',
-        'Executed profitable campaigns driving high-quality user acquisition.',
-        'Experimented with funnel optimization, improving overall conversion rates up to 25%.',
-        'Maintained a strict focus on ROAS & predictable revenue growth month-over-month.'
+        'Led user acquisition for 50+ apps and games, managing large-scale budgets and multiple ad accounts across Google Ads, Meta, TikTok, and Mintegral.',
+        'Drove high-quality installs at efficient CPIs through continuous campaign optimization, creative testing, and audience segmentation.',
+        'Collaborated with designers and video editors to produce high-performing ad creatives that improved CTR and conversion rates.',
+        'Managed ASO for Android apps and games, improving organic visibility and keyword rankings on Google Play.',
+        'Implemented and optimized IAA & IAP monetization models to maximize revenue while maintaining healthy user retention.',
+        'Set up and managed conversion tracking across Firebase, Google Analytics, Tenjin, and AppsFlyer for full-funnel visibility and data-driven decision making.'
       ],
       current: true,
     },
@@ -24,9 +26,10 @@ const Experience = () => {
       company: 'Funloft Solutions',
       period: 'Jan 2023 – April 2024',
       points: [
-        'Led the App Store Optimization (ASO) team to secure top organic rankings.',
-        'Scaled paid campaigns effectively lowering the average CPI across utilities.',
-        'Managed ad networks and optimized ad placements to maximize eCPM.',
+        'Led the ASO team, overseeing keyword research, metadata optimization, and app visibility strategy across Google Play and the App Store.',
+        'Improved organic rankings and drove consistent growth in app installs through data-backed ASO practices.',
+        'Managed user acquisition campaigns on Google Ads, optimizing for install volume and cost efficiency.',
+        'Planned and optimized IAA monetization setups, improving ad placements and maximizing eCPM across ad networks.'
       ],
       current: false,
     }
