@@ -41,19 +41,12 @@ const About = () => {
           </h3>
           <div className="space-y-3 sm:space-y-4 text-base lg:text-lg text-slate-600 leading-relaxed mb-6 sm:mb-8">
             <p className="font-medium text-slate-700">
-             Digital Marketing & App Growth Specialist with 4+ years in mobile apps and gaming. Expert in ASO, user acquisition, and monetization (IAA & IAP), driving growth through data-backed strategies.
+           Digital Marketing Expert & App Growth Specialist based in Islamabad with 4+ years of experience in mobile apps and gaming. I specialize in App Store Optimization, user acquisition, and monetization (IAA & IAP) to drive scalable growth and real revenue.
+
+I manage end-to-end growth strategies across Google Ads, Meta, TikTok, Mintegral, and Unity, backed by data-driven decision-making using Firebase, Google Analytics, and AppsFlyer.
             </p>
             <p>
-             Performance campaigns across Google Ads, Meta, TikTok, Mintegral & Unity to drive quality installs at optimal cost.
-
-Analytics & Tracking
-End-to-end tracking with Firebase, Google Analytics & AppsFlyer for data-driven decisions.
-
-ASO
-Optimizing keywords & metadata to improve app visibility and organic growth.
-
-Monetization (IAA & IAP)
-Maximizing revenue through optimized ads and in-app purchase strategies.
+            App Store Optimization | User Acquisition | Monetization (IAA & IAP)
             </p>
           </div>
 

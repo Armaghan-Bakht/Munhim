@@ -35,12 +35,16 @@ const Experience = () => {
     }
   ];
 
+  const [isHovered, setIsHovered] = useState(false);
+
   useEffect(() => {
+    if (isHovered) return;
+
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % experiences.length);
-    }, 4500); // Automatically slide every 4.5 seconds
+    }, 7000); // Automatically slide every 7 seconds
     return () => clearInterval(timer);
-  }, [experiences.length]);
+  }, [experiences.length, isHovered]);
 
   const handleDragEnd = (event, info) => {
     if (info.offset.x < -30) {
@@ -111,6 +115,10 @@ const Experience = () => {
               dragConstraints={{ left: 0, right: 0 }}
               dragElastic={0.4}
               onDragEnd={handleDragEnd}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              onTouchStart={() => setIsHovered(true)}
+              onTouchEnd={() => setIsHovered(false)}
             >
               <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-lg shadow-slate-200/60 border border-slate-200">
                 <div className="flex flex-col mb-6 gap-3">

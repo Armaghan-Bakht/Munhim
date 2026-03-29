@@ -16,28 +16,28 @@ const Projects = () => {
   const projects = [
   {
     title: "Anti Virus App",
-    tag: "Removed after app sale",
+  
     desc: "Managed full-scale user acquisition and monetization for an antivirus app on Google Ads, handling a large budget over a 1-year period (Aug 2023 – Aug 2024).",
     metric: "Achieved a 3.56x ROAS while driving 24.5M+ conversions and 812M+ impressions, with conversion tracking set up via Firebase. Monetized through a combined IAA & IAP model to maximize revenue across the user base. Campaign was successfully concluded after the app was acquired and sold.",
     img: p1,
   },
   {
     title: "Data Recovery App",
-    tag: "Sold",
+   
     desc: "Managed a performance-driven user acquisition campaign (Action Campaign) for a data recovery app on Google Ads, targeting premium markets — Korea and Japan — from Jan 2026 to Mar 2026.",
     metric: "Achieved 1.8x ROI on $109K+ spend, generating 1,574 in-app actions and 3.4M+ impressions. Reduced cost per action significantly by localizing ad assets for the target markets and running structured A/B tests on creatives. App monetized purely through IAP, with campaigns optimized to attract high-intent, paying users.",
     img: p2,
   },
   {
     title: "Time Warp Scan App",
-    tag: "Active Campaign",
+    
     desc: "Managing an active tROAS user acquisition campaign on Google Ads for a slow-motion video and scan effects app, running since Oct 2025.",
     metric: "Currently achieving 1.34x Conv. value/cost (tROAS) across 88.5M+ impressions and $52K+ spend. Running two active campaigns — a broad global campaign and a targeted scan-focused campaign — both optimized for maximum return on ad spend. App monetized through an IAA model with ongoing creative and bid optimization to improve ROAS.",
     img: p3,
   },
    {
     title: "Time Warp Scan App — Large Scale Campaign",
-    tag: "Paused",
+  
     desc: "Managed a high-budget tROAS user acquisition campaign on Google Ads for the Time Warp Scan app, running from Jul 2024 to Mar 2026.",
     metric: "Handled $493K+ in ad spend across 709M+ impressions, driving 18M+ interactions at an average cost of $0.01. Ran a large-scale Target ROAS campaign optimized for maximum volume and revenue return. One of the highest-budget campaigns managed independently, demonstrating ability to handle large accounts and significant budgets with confidence.",
 
@@ -45,14 +45,12 @@ const Projects = () => {
   },
   {
     title: "Video Player App",
-    tag: "Removed after app sale",
     desc: "Managed a large-scale tROAS user acquisition campaign on Google Ads for a video player app, running from Mar 2025 to Mar 2026.",
     metric: "Scaled the app to $357K+ in ad spend across 277M+ impressions, driving millions of interactions at an average cost of $0.01. Successfully grew the app to a scale that led to its acquisition and sale — campaign was removed following the app sale.",
     img: p5,
   },
   {
     title: "Vidma Video Downloader",
-    tag: "Removed after app sale",
     desc: "Managed one of the highest-performing user acquisition campaigns on Google Ads for a video downloader app, running from Jan 2023 to Mar 2025.",
     metric: "Scaled to $1.86M+ in total ad spend across 1.59B+ impressions, driving 36.9M+ conversions at a 0.90x Conv. value/cost. Started as a pure IAA monetization model — after implementing a paywall, the app began generating $200+ daily from IAP as well, significantly boosting overall revenue. Ran extensive A/B testing on creatives and ad assets, and set up full conversion tracking via Firebase to ensure every decision was data-backed. Campaign removed after the app was sold.",
     img: p6,
@@ -98,9 +96,6 @@ const Projects = () => {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-slate-900/10 to-transparent pointer-events-none transition-opacity duration-300 group-hover:opacity-70" />
-              <div className="absolute bottom-4 left-4 bg-white/20 backdrop-blur-md px-3.5 py-1.5 rounded-full text-white text-[10px] font-bold uppercase tracking-widest border border-white/20 shadow-sm">
-                {project.tag}
-              </div>
             </div>
 
             <div className="p-7 xl:p-8 flex flex-col flex-grow">
@@ -159,9 +154,6 @@ const Projects = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-slate-900/10 to-transparent pointer-events-none transition-opacity duration-300 group-hover:opacity-70" />
-                <div className="absolute bottom-4 left-4 bg-white/20 backdrop-blur-md px-3.5 py-1.5 rounded-full text-white text-[10px] font-bold uppercase tracking-widest border border-white/20 shadow-sm">
-                  {projects[currentIndex].tag}
-                </div>
               </div>
 
               <div className="p-7 sm:p-8 flex flex-col flex-grow">

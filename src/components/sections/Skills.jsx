@@ -9,26 +9,26 @@ import fireBase from '../../assets/firebase.jpg';
 const Skills = () => {
   const skills = [
     {
-      title: 'Paid Ads',
-      desc: 'Expert in Google Ads (UAC, Search, Display, YouTube) driving high-intent installs.',
+      title: 'Paid Ads & User Acquisition',
+      desc: 'Running performance campaigns across Google Ads (UAC, Search, Display, YouTube), Meta, TikTok, Mintegral, and Unity to drive high-quality installs at the best possible cost.',
       icon: Megaphone,
       color: 'bg-blue-50 text-blue-600',
     },
     {
-      title: 'Analytics',
-      desc: 'Data extraction & interpretation using Firebase and Google Analytics to find growth levers.',
+      title: 'Analytics & Conversion Tracking',
+      desc: 'Setting up and managing end-to-end tracking using Firebase, Google Analytics, and AppsFlyer — so every campaign decision is based on clean, accurate data.',
       icon: LineChart,
       color: 'bg-indigo-50 text-indigo-600',
     },
     {
-      title: 'Growth Settings',
-      desc: 'Optimizing CPI, tracking ROAS, increasing LTV, and boosting core retention metrics.',
+      title: 'App Store Optimization (ASO)',
+      desc: 'Keyword research, metadata optimization, and visibility growth on Google Play and the App Store — helping apps get found by the right users organically.',
       icon: TrendingUp,
       color: 'bg-sky-50 text-sky-600',
     },
     {
-      title: 'ASO & Monetization',
-      desc: 'In-App Purchases and Subscription Optimization to maximize the revenue funnel.',
+      title: 'Monetization (IAA & IAP)',
+      desc: 'Designing and optimizing in-app advertising and in-app purchase strategies to maximize revenue from your existing user base without hurting retention.',
       icon: Gem,
       color: 'bg-emerald-50 text-emerald-600',
     },
